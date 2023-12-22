@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Header />
+    <p>Dashboard layout</p>
     <slot />
-    <Footer />
   </div>
 </template>
