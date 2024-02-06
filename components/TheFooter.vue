@@ -15,8 +15,7 @@
   </footer>
 </template>
 
-<script>
-import { defineComponent, h } from 'vue'
+<script setup lang="ts">
 
 const navigation = [
   {
@@ -89,11 +88,4 @@ const navigation = [
   },
 ]
 
-export default {
-  setup() {
-    return {
-      navigation,
-    }
-  },
-}
 </script>

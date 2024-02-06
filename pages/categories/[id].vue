@@ -10,6 +10,7 @@
 const route = useRoute();
 // console.log(route);
 const { id } = route.params;
+
 </script>
 
 <style lang="scss" scoped></style>
