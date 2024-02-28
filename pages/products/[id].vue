@@ -134,7 +134,7 @@ const { id } = route.params;
 
 const { data: product, error } = await useFetch('/api/products/' + id);
 
-if (!loading && !error) {
+if (!error) {
   selectedSize.value = product.sizes[0]; // Set selectedSize when data is loaded and no error
 }
 

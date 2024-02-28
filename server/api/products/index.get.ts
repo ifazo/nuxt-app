@@ -1,18 +1,29 @@
-import { db } from "~/db";
-import { Product } from "~/types";
+import prisma from "~/prisma";
 
 export default defineEventHandler(async (event) => {
 
     const query = getQuery(event);
     const { title, category } = query as Product;
     if (title) {
-        const products = await db.products.find({ title: { $regex: title, $options: 'i' } }).toArray();
+        const products = await prisma.product.findMany({
+            where: {
+                title: {
+                    contains: title
+                }
+            }
+        });
         return products;
     }
     else if (category) {
-        const products = await db.products.find({ category: { $regex: category, $options: 'i' } }).toArray();
+        const products = await prisma.product.findMany({
+            where: {
+                category: {
+                    contains: category
+                }
+            }
+        });
         return products;
     }
-    const products = await db.products.find().toArray();
+    const products = await prisma.product.findMany();
     return products;
 })

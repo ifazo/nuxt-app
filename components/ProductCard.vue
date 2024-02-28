@@ -7,7 +7,7 @@
         <div class="pt-10 pb-4 text-center">
             <h3 class="text-sm font-medium text-gray-900">
                 <NuxtLink
-                    :to="`/products/${product._id}`"
+                    :to="`/products/${product.id}`"
                 >
                     <span aria-hidden="true" class="absolute inset-0" />
                     {{ product.title }}
