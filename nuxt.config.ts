@@ -1,6 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import path from 'path';
+
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
@@ -8,4 +9,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: [
+    'nuxt-primevue'
+  ],
+  primevue: {
+    importPT: { from: path.resolve(__dirname, './presets/lara/') } 
+  }
 });

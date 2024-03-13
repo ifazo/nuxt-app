@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script setup>
+Bars2Icon
 definePageMeta({
   layout: 'dashboard',
 })
